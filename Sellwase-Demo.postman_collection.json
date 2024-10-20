@@ -1,0 +1,529 @@
+{
+	"info": {
+		"_postman_id": "c38904ad-71c9-4e65-8cd6-8d2aa0f3894f",
+		"name": "Sellwase-Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "checkUserLogin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/checkLogin/Mohan@gmail.com/1234",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"checkLogin",
+						"Mohan@gmail.com",
+						"1234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"uname\" : \"lion\",\n    \"uemail\" : \"lion@gmail.com\",\n    \"pass\" : \"12345\",\n    \"uPhoneNum\" : 733457317,\n    \"location\" : \"Marryland\",\n    \"ratingCount\" : 25,\n    \"userRating\" : 4.5,\n    \"profilePic\" : null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check Unqiue email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/checkUniqueEmail/Mohan@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"checkUniqueEmail",
+						"Mohan@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Profile photo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "uid",
+							"value": "304",
+							"type": "default"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/mohanaumasushmanthpenumarthi/Downloads/WhatsApp Image 2023-12-04 at 8.05.17 AM.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/addImage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addImage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getUserDetails/304",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getUserDetails",
+						"304"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Profile",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/deleteProfile/303",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deleteProfile",
+						"303"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Profile",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"uid\": 304,\n    \"uname\": \"Bhagavan Durga\",\n    \"uemail\": \"Bhagavan@gmail.com\",\n    \"pass\": \"00000\",\n    \"uPhoneNum\": \"7082344557\",\n    \"location\": \"Marryland\",\n    \"ratingCount\": 25,\n    \"userRating\": 4.5,\n    \"profilePic\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/updateProfile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"updateProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "prodName",
+							"value": "Table",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "60",
+							"type": "default"
+						},
+						{
+							"key": "isGiveAway",
+							"value": "true",
+							"type": "default"
+						},
+						{
+							"key": "prodCategory",
+							"value": "Furniture",
+							"type": "default"
+						},
+						{
+							"key": "condition",
+							"value": "Used - Good",
+							"type": "default"
+						},
+						{
+							"key": "prodDescription",
+							"value": "Just bought a month ago",
+							"type": "default"
+						},
+						{
+							"key": "isDelivery",
+							"value": "true",
+							"type": "default"
+						},
+						{
+							"key": "uid",
+							"value": "303",
+							"type": "default"
+						},
+						{
+							"key": "prodImage1",
+							"type": "file",
+							"src": "/Users/mohanaumasushmanthpenumarthi/Downloads/15.drawio.png"
+						},
+						{
+							"key": "prodImage2",
+							"type": "file",
+							"src": "/Users/mohanaumasushmanthpenumarthi/Downloads/4a.drawio.png"
+						},
+						{
+							"key": "prodImage3",
+							"type": "file",
+							"src": "/Users/mohanaumasushmanthpenumarthi/Downloads/1.png"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "prodID",
+							"value": "304",
+							"type": "default"
+						},
+						{
+							"key": "prodName",
+							"value": "Mobile",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "150",
+							"type": "default"
+						},
+						{
+							"key": "isGiveAway",
+							"value": "false",
+							"type": "default"
+						},
+						{
+							"key": "prodCategory",
+							"value": "Electronics",
+							"type": "default"
+						},
+						{
+							"key": "condition",
+							"value": "Used - Good",
+							"type": "default"
+						},
+						{
+							"key": "prodDescription",
+							"value": "Just bought a year ago",
+							"type": "default"
+						},
+						{
+							"key": "isDelivery",
+							"value": "false",
+							"type": "default"
+						},
+						{
+							"key": "uid",
+							"value": "302",
+							"type": "default"
+						},
+						{
+							"key": "prodImage1",
+							"type": "file",
+							"src": "/Users/mohanaumasushmanthpenumarthi/Downloads/IMG-20180806-WA0013.jpg"
+						},
+						{
+							"key": "prodImage2",
+							"type": "file",
+							"src": "/Users/mohanaumasushmanthpenumarthi/Downloads/IMG20181016162206.jpg"
+						},
+						{
+							"key": "prodImage3",
+							"type": "file",
+							"src": "/Users/mohanaumasushmanthpenumarthi/Downloads/IMG_3947.JPG"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/updateProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"updateProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getAllProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getAllProducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMyProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/myProducts/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"myProducts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add To WishList",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"prodID\" : 602,\n    \"uid\" : 352\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addToMyWishList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addToMyWishList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get My WishList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/myWishList/352",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"myWishList",
+						"352"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/deleteProduct/710",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deleteProduct",
+						"710"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove from wish list",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/removeFromWishList/453",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"removeFromWishList",
+						"453"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Ratings",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/updateRating/304/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"updateRating",
+						"304",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FilteredProducts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"minPrice\" : 0,\n    \"maxPrice\" : 1000,\n    \"category\" : \"Electronics\",\n    \"isGiveAway\" : false,\n    \"isDelivery\" : false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/filteredProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"filteredProducts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
